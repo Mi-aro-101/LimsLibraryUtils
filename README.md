@@ -1,25 +1,41 @@
 # LimsLibraryUtils
-Dedicated library that contains all the utilities used in Lims Project
+<h3>Dedicated library that contains all the utilities used in Lims Project</h3>
 
-Steps to deploy for use :
-    1 - Implement your utility class
-        NB : Make sure there is not an error in your code
-    2 - Build it and export it as dll by running
-        shell : "dotnet build --configuration Release"
-        NB : The dll will be normally located inside ./bin/Release/net8.0/ApiService.dll
-    3 - Now go to your other project where you want to use this lib
-    4 - Create a directory named /lib
-        Your project directory achitecture shall be like this :
-            /MyProject
-                /lib
-                    ApiService.dll
-                /MyProject.csproj
-                /Program.cs
-    5 - Change your .csproj and add this inside "<ItemGroup>" with the other nuget or other packages
-        "
-            <Reference Include="ApiService">
-                <HintPath>.\lib\ApiService.dll</HintPath>
-            </Reference>
-        "
-    6 - Run : "dotnet restore" in the project to reload it
-    7 - Now enjoy using, do not forget to import the package that contains your class in the library
+Steps to deploy for use : <br />
+    <ol>
+        <li>
+            Implement your utility class <br />
+            NB : Make sure there is not an error in your code
+        </li>
+        <li>
+            <p>Build it and export it as dll by running <br />
+            shell : `dotnet build --configuration Release` <br />
+            NB : The dll will be normally located inside ./bin/Release/net8.0/ApiService.dll </p>
+        </li>
+        <li>
+           <p> Now go to your other project where you want to use this lib</p>
+        </li>
+        <li>
+            Create a directory named "/lib" in the root of your project <br />
+            Your project directory achitecture shall be like this :
+            <div style="margin-left: 25px;">
+                <div>/MyProject</div>
+                <div style="text-indent: 25px;">/lib</div>
+                    <div style="text-indent: 50px;">ApiService.dll  </div>
+                <div style="text-indent: 25px;">/MyProject.csproj</div>
+                <div style="text-indent: 25px;">/Program.cs</div><br />
+            </div>
+        </li>
+        <li>
+            Change your .csproj and add this inside `<ItemGroup>` section with the other nuget or other packages : <br />
+            <div>`<Reference Include="ApiService">`</div>
+                <div style="text-indent: 25px;">`<HintPath>.\lib\ApiService.dll</HintPath>`</div>
+            <div>`</Reference>`</div
+        </li>
+        <li>
+           <p> Run : `dotnet restore` to reload</p>
+        </li>
+        <li>
+            Now enjoy using, do not forget to import the package that contains your class from the library
+        </li>
+    </ol>
