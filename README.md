@@ -18,13 +18,17 @@ Steps to deploy for use : <br />
         <li>
             Create a directory named "/lib" in the root of your project <br />
             Your project directory achitecture shall be like this :
-            `MyProject ├── lib │ └── ApiService.dll ├── MyProject.csproj └── Program.cs`
+            <div>       MyProject </div>
+            <div>       ├── lib </div>
+            <div>       │ └── ApiService.dll </div>
+            <div>       ├── MyProject.csproj </div>
+            <div>       └── Program.cs </div>
         </li>
         <li>
             Change your .csproj and add this inside `<ItemGroup>` section with the other nuget or other packages : <br />
             <div>`<Reference Include="ApiService">`</div>
-                <div style="text-indent: 25px;">`<HintPath>.\lib\ApiService.dll</HintPath>`</div>
-            <div>`</Reference>`</div
+                <div>     `  <HintPath>.\lib\ApiService.dll</HintPath>`</div>
+            <div>`</Reference>`</div>
         </li>
         <li>
            <p> Run : `dotnet restore` to reload</p>
