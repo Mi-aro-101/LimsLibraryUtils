@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace LimsUtils.Api;
 
@@ -15,9 +16,14 @@ public class ApiResponse
         }
     }
 
+    [JsonPropertyName("data")]
     public object? Data { get; set; }
+    [JsonPropertyName("viewBag")]
     public Dictionary<string, object>? ViewBag { get; set; }
+    [JsonPropertyName("message")]
     public string? Message { get; set; }
+    [JsonPropertyName("isSuccess")]
     public bool IsSuccess { get; set; }
+    [JsonPropertyName("statusCode")]
     public int StatusCode { get; set; }
 }
