@@ -3,7 +3,7 @@ using System.IO;
 
 namespace LimsUtils.Utility;
 
-public class FileReader
+public class FileUtils
 {
     public static string ReadFile(string filePath)
     {
