@@ -22,7 +22,7 @@ public class ViewUtils
     public static string RenderMoney(decimal money)
     {
         string result = "";
-        result = string.Format(CultureInfo.InvariantCulture, "{0:#,##0.00}", money).Replace(",", " ");
+        result = string.Format(CultureInfo.InvariantCulture, "{0:#,##0.00}", money).Replace(",", " ").Replace(".", ",");
         return result;
     }
 }
